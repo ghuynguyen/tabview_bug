@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="App5.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <Grid>
+        <xct:TabView
+            TabContentBackgroundColor="#2196f3"
+            TabIndicatorColor="#f50057"
+            TabStripBackgroundColor="#2196f3"
+            TabStripHeight="60"
+            TabStripPlacement="Top">
+
+            <xct:TabViewItem
+                FontSize="12"
+                Icon="triangle.png"
+                Text="Tab 1"
+                TextColor="White"
+                TextColorSelected="#f50057">
+                <StackLayout Margin="0,8" BackgroundColor="#f0f0f0">
+                    <ListView>
+                        <ListView.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>item 1</x:String>
+                                <x:String>item 2</x:String>
+                                <x:String>item 3</x:String>
+                                <x:String>item 4</x:String>
+                                <x:String>item 5</x:String>
+                                <x:String>item 6</x:String>
+                                <x:String>item 7</x:String>
+                                <x:String>item 8</x:String>
+                                <x:String>item 9</x:String>
+                                <x:String>item 10</x:String>
+                                <x:String>item 11</x:String>
+                                <x:String>item 12</x:String>
+                                <x:String>item 13</x:String>
+                                <x:String>item 14</x:String>
+                                <x:String>item 15</x:String>
+                                <x:String>item 16</x:String>
+                                <x:String>item 17</x:String>
+                                <x:String>item 18</x:String>
+                                <x:String>item 19</x:String>
+                            </x:Array>
+                        </ListView.ItemsSource>
+                    </ListView>
+                </StackLayout>
+
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                FontSize="12"
+                Icon="circle.png"
+                Text="Tab 2"
+                TextColor="White"
+                TextColorSelected="#f50057">
+                <StackLayout Margin="0,8" BackgroundColor="#f0f0f0">
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                        <Label x:Name="Counter" Text="asfasfasf" />
+                        <Button Clicked="TapGestureRecognizer_Tapped" Text="Click me!" />
+                        <StackLayout
+                            BackgroundColor="#f50057"
+                            HeightRequest="30"
+                            WidthRequest="50">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                            </StackLayout.GestureRecognizers>
+                            <Label
+                                HorizontalOptions="Center"
+                                Text="Click me!"
+                                TextColor="White" />
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+            </xct:TabViewItem>
+        </xct:TabView>
+    </Grid>
+
+
+</ContentPage>
